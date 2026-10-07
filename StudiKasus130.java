@@ -10,5 +10,13 @@ public class StudiKasus130 {
         int jumlahCup = sc.nextInt();
         System.out.print("Masukkan uang bayar\t : ");
         int uangBayar = sc.nextInt();
+        sc.close();
+
+        int totalHarga = jumlahCup * hargaPerCup;
+        int diskon = (totalHarga >= 100000 ? totalHarga * 10 / 100 : 0);
+        int totalBayar = totalHarga - diskon;
+        System.out.println("Total Bayar \t\t : Rp "+totalBayar);
+        System.out.println("Diskon \t\t\t : Rp "+diskon);
+        
     }
 }
